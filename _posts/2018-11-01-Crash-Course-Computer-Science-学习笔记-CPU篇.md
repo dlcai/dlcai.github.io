@@ -9,7 +9,7 @@ tags: [notes, cs, cpu, 学习笔记，视频课程]
 程序是一条条指令组成的；内存中既可以存放数据，也可以存放指令。      
 ![1.png](https://ww1.sinaimg.cn/large/007RDtggly1gw9m8cgr0wj30jg08k0yu.jpg)        
 指令表：前4位是操作码，后4位是内存地址或寄存器，表示数据来自哪里。     
-![2.png](https://ww.sinaimg.cn/large/007RDtggly1gw9m971unyj30m80cjgy4.jpg)      
+![2.png](https://ww1.sinaimg.cn/large/007RDtggly1gw9m971unyj30m80cjgy4.jpg)      
 解码阶段(Decode Phase)：指令由控制单元内的逻辑电路进行解码      
 ![3.png](http://ww1.sinaimg.cn/large/007RDtgggy1gw9mb3dkocj30m80d37f1.jpg)      
 执行：把检查指令的电路输出连到RAM的RE线，把指令后4位发送到地址线，读出数据到寄存器A       
