@@ -15,3 +15,6 @@ vendor
 # npm dependencies
 node_modules
 package-lock.json
+
+# shell script for auto-generation of new post with template header
+post.sh
