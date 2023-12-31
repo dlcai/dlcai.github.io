@@ -26,7 +26,6 @@ $A = b^3 /3$ 。我们来看看这个结果是如何推导出来的。
 越来越多，总面积逐渐减小，总面积都会越来越接近抛物线段面积A。  
 如图I.5所示, 简单起见我们把底边n等分，每个长条矩形底边长为$b/n$ , 则等分点的横坐标x分别为：         
 
-
 $$
 \begin{align}
 0, \frac{b}{n}, \frac{2b}{n},\frac{3b}{n},\cdots,\frac{(n-1)b}{n},\frac{nb}{n} = b
@@ -48,7 +47,7 @@ S_n = \frac{b^3}{n^3}(1^2 + 2^2 + \cdots + n^2) \tag{1}
 $$
 记内接矩形面积之和为$s_n$, 其高度对应的横坐标 $x = \dfrac{kb}{n}, \ k= 0,1,2,\cdots n-1$ . 代入矩形面积表达式得
 $$
-\hspace{-20em}
+\hspace{-10em}
 \begin{align}
 s_n = \frac{b^3}{n^3}[1^2 + 2^2 + \cdots + (n-1)^2] \tag{2}
 \end{align}
@@ -57,7 +56,7 @@ $$
 
 下面来推导前n个自然数的平方和$1^2 + 2^2 + \cdots +n^2$ 的计算公式：   
 $$
-\hspace{-20em}
+\hspace{-10em}
 \begin{align}
 1^2+2^2+\cdots+n^2 = \frac{n^3}{3} + \frac{n^2}{2} + \frac{n}{6}  \tag{3}
 \end{align}
@@ -66,7 +65,6 @@ $$
 这个公式对所有$n \ge1$ 均成立。证明过程如下。  
 把等式$(k+1)^3 = k^3+3k^2+3k+1$ 重写为 $3k^2+3k+1 = (k+1)^3-k^3$  
 代入$k=1,2,\cdots n-1$, 得到$n-1$个等式       
-
 $$
 \begin{align}
 3 \cdot 1^2 + 3 \cdot 1 + 1 = 2^3 - 1^3 \\

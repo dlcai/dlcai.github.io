@@ -61,7 +61,16 @@ $\hspace{10em}$									$A = B$     <font face="STKaiti" size=4 style="font-weig
 并集就是把两个集合所有元素合并在一起组成的集合，定义为所有属于A或属于B的元素组成的集合，   
 即  $A \cup B = \lbrace x \ |\ x \in A \ 或\ x \in B \rbrace$    也就是说$A \cup B$ 是至少属于A, B其中一个集合的元素的集合。     
 如图1.6(a)的阴影部分表示$A \cup B$   
-![](https://cdn.jsdelivr.net/gh/dlcai/image-bed/img/calculus1_basics_p2/1.png)
+
+![](https://cdn.jsdelivr.net/gh/dlcai/image-bed/img/calculus1_basics_p2/1.png)  
+
+
+
+
+
+ 
+
+
 
 类似地，$A$ 和 $B$ 的交集记为 $A \cap B$ （<font face="STKaiti" size=4 style="font-weight:bold">读作：</font>$A$ <font face="STKaiti" size=4 style="font-weight:bold">交</font> $B$ ）    
 定义为所有属于$A$ 且属于$B$ 的元素组成的集合，即 $A \cap B = \lbrace\ x \ |\ x \in A \ 且\ x \in B \ \rbrace$ 。   
@@ -73,8 +82,43 @@ $\hspace{10em}$									$A = B$     <font face="STKaiti" size=4 style="font-weig
 图$1.6(b)$ 中区域$A$的非阴影部分表示$A-B$ ，区域B的非阴影部分表示$B-A$。  
 集合的交和并运算与普通的实数加法和乘法有许多形式上的相似之处，  
 例如根据定义，集合的交和并是顺序无关的，  
-因此集合的交和并运算满足交换律 (commutative)，即$A \cup B = B \cup A$ 以及 $A \cap B = B \cap A$。   
-根据定义交和并运算也满足结合律 (associative), 即$(A \cup B) \cup C = A \cup (B \cup C)$ 以及 $(A \cap B) \cap C = A \cap (B \cap C)$   
+因此集合的交和并运算满足交换律 (commutative)，即    
+$A \cup B = B \cup A$ 以及 $A \cap B = B \cap A$。   
+根据定义交和并运算也满足结合律 (associative),  即   
+$(A \cup B) \cup C = A \cup (B \cup C)$ 以及 $(A \cap B) \cap C = A \cap (B \cap C)$        
+集合的交和并运算也满足**分配律**：   
+1）$A \cap(B \cup C)=(A \cap B) \cup (A \cap C)$        
+2）$A \cup (B \cap C) = (A \cup B ) \cap (A \cup C)$           
+**1）证明：**先证$A \cap(B \cup C) \subseteq (A \cap B) \cup (A \cap C)$.  
+对任意$x \in  A \cap(B \cup C)$, 有 $x \in A$ 且 $x \in B \cup C$,  即：      
+$x \in A$ 且 ( $x \in B$ 或$x \in C$ )   
+若$x \in B$, 则 $x \in A$ 且 $x \in B$  即$x \in A \cap B$   
+若$x \in C$, 则 $x \in A$ 且 $x \in C$ 即 $x \in A \cap C$   
+$\therefore$ 有 $x \in A \cap B $ 或 $x \in A \cap C$  即 $x \in (A \cap B) \cup (A \cap C)$     
+由子集的定义，$A \cap(B \cup C) \subseteq (A \cap B) \cup (A \cap C)$ 得证.       
+
+再证$(A \cap B) \cup (A \cap C) \subseteq A \cap(B \cup C)$.    
+对任意$x \in (A \cap B) \cup (A \cap C)$, 有$x \in (A\cap B)$或$x\in (A\cap C)$ , 即:   
+$x \in A$ 且 ( $x \in B$ 或 $x \in C$ )  即 $x \in A$ 且 $x \in B \cup C$    
+$\therefore$ $x \in A \cap (B \cup C)$.  由子集的定义，$A \cap(B \cup C) \subseteq (A \cap B) \cup (A \cap C)$ 也得证.    
+$\therefore$ 由集合相等的定义，分配律 1) 得证.      
+
+**2）证明:**  先证 $A \cup (B \cap C) \subseteq (A \cup B ) \cap (A \cup C)$.     
+对任意$x \in A\cup (B \cap C)$, 有$x \in A$ 或 $x \in B\cap C$, 即：  
+$x \in A$ 或 ( $x \in B$ 且 $x \in C$ )     
+若$x \in A$, 则有 $x \in A\cup B$ 且 $x \in A\cup C$    
+若$x \in B$ 且$x\in C$,  也有 $x \in A\cup B$ 且 $x \in A\cup C$      
+$\therefore$ 有 $x \in (A\cup B)\cap (A\cup C)$.  由子集的定义，$A \cup (B \cap C) \subseteq (A \cup B ) \cap (A \cup C)$ 得证.        
+
+再证$(A \cup B ) \cap (A \cup C) \subseteq A \cup (B \cap C)$ .      
+对任意$x \in (A \cup B ) \cap (A \cup C)$，有  ( $x \in A$ 或 $x \in B$ ) 且  ( $x \in A$ 或 $x \in C$ ) 成立,    
+若$x \in A$, 命题显然成立. 若$x \notin A$, 要使合取式的支命题同时为真，    
+须满足$x\in B$ 且 $x \in C$, 即$x \in B\cap C$.        
+$\therefore$ 有 $x \in A$ 或 $x \in B\cap C$  即 $x \in A \cup (B \cap C)$.   
+由子集的定义，$(A \cup B ) \cap (A \cup C) \subseteq A \cup (B \cap C)$ 也得证.      
+$\therefore$ 由集合相等的定义，分配律 2) 得证.      
+
+
 
 ## 集合的集合
 
