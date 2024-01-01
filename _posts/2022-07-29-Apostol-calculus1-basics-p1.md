@@ -11,14 +11,26 @@ tags: [微积分基础,积分学]
 
 阿基米德 (公元前287-212年) 的穷竭法演变成了今天的积分学。阿基米德曾用穷竭法求出圆的面积。  
 如图是穷竭法的举例，用内接多边形近似半圆的面积。   
-![](https://cdn.jsdelivr.net/gh/dlcai/image-bed/img/calculus1_basics_p1/1.png)
+![](https://imagebed.deepmind.top/img/calculus1_basics_p1/1.png)
+
+
+
+
+
+
 
 ## 用穷竭法求抛物线下的面积
 
 如图I.3所示，由抛物线$y = x^2$ 和两条直线$y=0, x= b$ 围成的图形称为一个抛物线段 (parabolic segment) ,     
 其面积设为A, 被一个底边长为b高为$b^2$ 矩形所包围。阿基米德发现抛物线下的面积正好是矩形的$1/3$ , 即  
 $A = b^3 /3$ 。我们来看看这个结果是如何推导出来的。   
-![](https://cdn.jsdelivr.net/gh/dlcai/image-bed/img/calculus1_basics_p1/2.png)
+
+![](https://imagebed.deepmind.top/img/calculus1_basics_p1/2.png)
+
+
+
+
+
 
 穷竭法的思想很简单，如图I.4所示，通过对底边进行划分，可以得到一系列的长条矩形，用矩形   
 面积之和来近似抛物线段的面积。内接矩形之和是面积A的一个下限，外接矩形之和是面积A的一个   
@@ -34,7 +46,24 @@ $$
 
 一般地，$x = \dfrac{kb}{n}, \ k= 0,1,2,\cdots n$ .   则第 $k$ 个矩形的面积为$\left( \dfrac{b}{n} \right)\left( \dfrac{kb}{n} \right)^2=\dfrac{b^3}{n^3}k^2 $     
 
-​        ![](https://cdn.jsdelivr.net/gh/dlcai/image-bed/img/calculus1_basics_p1/3.png)
+
+
+​        ![](https://imagebed.deepmind.top/img/calculus1_basics_p1/3.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

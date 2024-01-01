@@ -53,7 +53,7 @@ $$
 
 平均数只能确定一组数据的中心，却无法给出数据变动情况的信息。通过计算 **Range** (极差，也称全距), 我们可以初步获知数据的分散情况。全距 (极差) 描述了数据扩展的范围，就像在测量数据的宽度，计算方法是最大值减去最小值 (上界减下界)。   
 全距仅仅描述了数据的宽度，无法反映数据在上下界之间的真实分布，受异常值影响很大。为了消除异常值的影响，可以采用更小的距来度量，即找出全距中不包含异常值的部分。一种常用的迷你距 (Mini Range) 是**四分位距 (IQR, InterQuartile Range )**. 四分位距仅考虑数据中心(中位数) 附近的数值。构建四分位距的方法是先讲数据升序排列，然后将数据一分为四，每个数据块包含四分之一(25%) 的数据。     
-![](https://jsd.onmicrosoft.cn/gh/dlcai/image-bed/img/head_first_statistics1/1.png)
+![](https://imagebed.deepmind.top/img/head_first_statistics1/1.png)
 
 
 
@@ -69,7 +69,7 @@ $$
 
 
 
-![](https://jsd.onmicrosoft.cn/gh/dlcai/image-bed/img/head_first_statistics1/2.png)
+![](https://imagebed.deepmind.top/img/head_first_statistics1/2.png)
 
 
 

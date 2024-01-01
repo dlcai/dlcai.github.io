@@ -24,7 +24,7 @@ $(b)$ 对集合中的任意一个数$x$, 数 $x+1$ 也在集合中.
 1902年，希尔伯特《几何基础》发表，5组数学公理确立了**欧几里德直线上的点与实数**的**一一对应**关系，是数学发展史上的里程碑事件。直线通常叫做实线或实轴。而且习惯上可互换使用实数和点这两个词。于是我们经常讲点$x$而不说对应于实数$x$的点。如图，我们选择直线上一点表示$0$，在 $0$ 右边的某一点表示 $1$。这个选择确定了尺度。  
 实数中的序关系有一个简单的几何解释。如图。如果$x<y$，则点$x$位于点$y$的左边。正数位于$0$的右边而负数位于$0$的左边。如果$a<b$，当且仅当点$x$位于$a$和$b$之间时$x$满足不等式$a<x<b$.           
 
-![](https://cdn.jsdelivr.net/gh/dlcai/image-bed/img/calculus1_basics_p3/7.png)  
+![](https://imagebed.deepmind.top/img/calculus1_basics_p3/7.png)  
 
 
 
@@ -62,7 +62,7 @@ $(b)$ 小于$B$ 的数不是 $S$ 的上界.
 
 
 
-![](https://jsd.onmicrosoft.cn/gh/dlcai/image-bed/img/calculus1_basics_p3/8.png)
+![](https://imagebed.deepmind.top/img/calculus1_basics_p3/8.png)
 
 
 
