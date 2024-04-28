@@ -1,5 +1,5 @@
 ---
-title: Apostol微积分Ⅰ第一章 积分学概念 P2
+title: Apostol微积分Ⅰ第一章 积分学概念 P2 面积公理
 date: 2024-02-15 16:47:14 +0800
 categories: [数学,微积分]
 tags: [积分学概念，面积]
@@ -37,7 +37,6 @@ $$
 
 **2. 可加性** (Additive property) 如果$S$和$T$在$\mathscr{M}$ 中，则$S \cup T$ 和 $S \cap T$ 也在$\mathscr{M}$中. 且有
 
-
 $$
 a(S\cup T) = a(S) + a(T) - a(S \cap T)
 $$
@@ -63,7 +62,7 @@ $$
 
 **6.穷竭性** (Exhaustion property)  令$Q$是被围在阶梯区域$S$和$T$之间的点集，即
 $$
-S \le Q \le T  \tag{1.1}
+S \subseteq Q \subseteq T  \tag{1.1}
 $$
 如果有且仅有一个实数$c$使得不等关系
 $$
@@ -123,7 +122,7 @@ P = \{x_0, x_1,\cdots,x_n\}
 $$
 来指明这个划分. 划分$P$确定了$n$个闭子区间 (closed subintervals):  
 $$
-[x_0, x1],[x1,x2],\cdots,[x_{n-1},x_n]
+[x_0, x_1],[x_1,x_2],\cdots,[x_{n-1},x_n]
 $$
 一个典型(typical) 的闭子区间是$[x_{k-1},x_k]$，称为划分$P$ 的第$k$个闭子区间,  如图$1.18$ 所示. 对应的开区间$(x_{k-1},x_k)$ 称为划分$P$的第$k$个开子区间. 
 
