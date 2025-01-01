@@ -70,7 +70,7 @@ layout: default
           <i class="far fa-folder-open fa-fw mr-1"></i>
           {% for category in page.categories %}
             <a href='{{ site.baseurl }}/categories/{{ category | slugify | url_encode }}/'>{{ category }}</a>
-            {%- unless forloop.last -%}> {%- endunless -%}
+            {%- unless forloop.last -%} > {%- endunless -%}
           {% endfor %}
         </div>
         {% endif %}
