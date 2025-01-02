@@ -7,29 +7,28 @@ tags: [集合论基础,良序原理,数学归纳法,等价类,基数]
 
 ## 集合 Sets
 
-**子集的定义 (subsets)**
+> **子集的定义 (subsets)**  
+> $(i)$ 如果$x \in A \implies x \in B$ 我们说A是$B$ 的子集，记为 $A \subseteq B$. 也就是说，$A$的所有成员也都是$B$ 的成员. 同样的包含关系也可以记为 $B \supseteq A$.    
+> $(ii)$ 集合相等的定义：如果$A \subseteq B$ 且 $B \subseteq A$ ，我们说集合A与集合$B$ 相等，记为$A=B$. 也就是说，$A$和$B$包含的元素完全相同. 集合$A$和集合$B$ 不相等则记为$A \neq B$.     
+> $(iii)$ 如果$A \subseteq B$ 且 $A \neq B$ ，我们说$A$是$B$的真子集 (proper subset)，记为 $A \subset B$.     
 
-$(i)$ 如果$x \in A \implies x \in B$ 我们说A是$B$ 的子集，记为 $A \subseteq B$. 也就是说，$A$的所有成员也都是$B$ 的成员. 同样的包含关系也可以记为 $B \supseteq A$.    
-$(ii)$ 集合相等的定义：如果$A \subseteq B$ 且 $B \subseteq A$ ，我们说集合A与集合$B$ 相等，记为$A=B$. 也就是说，$A$和$B$包含的元素完全相同. 集合$A$和集合$B$ 不相等则记为$A \neq B$.     
-$(iii)$ 如果$A \subseteq B$ 且 $A \neq B$ ，我们说$A$是$B$的真子集 (proper subset)，记为 $A \subset B$.     
+> **集合运算的定义 (set operations)**   
+> $(i)$ 两个集合$A$ 与$B$ 的并集 (union) 定义为：   
+> $A \cup B := \Bigl\lbrace{ x \mid x \in A \ 或 \  x \in B \Bigr\rbrace}$   
+> $(ii)$ 两个集合$A$ 与$B$ 的交集 (intersection) 定义为：  
+> $A \cap B := \Bigl\lbrace x \mid x \in A \ 且 x \in B\Bigr\rbrace$    
+> $(iii)$ $B$ 在$A$ 中的相对补集 (the complement of B relative to A, 或记为集合论差$A-B$ ) 定义为：  
+> $A \setminus B := \Bigl\lbrace x \mid x \in A \ 且\ x \notin B\Bigr\rbrace$   
+> ($iv$) 更常见的是绝对补集，如果$A$ 为全集 (universe) 或从上下文可知$A$包含$B$，  
+> 我们说$B$ 的补集 (complement of $B$), 记为$B^{\complement}$ 而不是 $A \setminus B$ . 	    
+> $(v)$ 如果$A \cap B = \emptyset$ , 我们说$A$和$B$ 是分离的 (disjoint).   
 
-**集合运算的定义 (set operations)**   
-$(i)$ 两个集合$A$ 与$B$ 的并集 (union) 定义为：   
-$A \cup B := \Bigl\lbrace{ x \mid x \in A \ 或 \  x \in B \Bigr\rbrace}$   
-$(ii)$ 两个集合$A$ 与$B$ 的交集 (intersection) 定义为：  
-$A \cap B := \Bigl\lbrace x \mid x \in A \ 且 x \in B\Bigr\rbrace$    
-$(iii)$ $B$ 在$A$ 中的相对补集 (the complement of B relative to A, 或记为集合论差$A-B$ ) 定义为：  
-$A \setminus B := \Bigl\lbrace x \mid x \in A \ 且\ x \notin B\Bigr\rbrace$   
-($iv$) 更常见的是绝对补集，如果$A$ 为全集 (universe) 或从上下文可知$A$包含$B$，  
-我们说$B$ 的补集 (complement of $B$), 记为$B^{\complement}$ 而不是 $A \setminus B$ . 	    
-$(v)$ 如果$A \cap B = \emptyset$ , 我们说$A$和$B$ 是分离的 (disjoint).   
-
-**德摩根律 (Demorgan)**  如果$A$ , $B$,  $C$ 为任意三个集合，我们有  
-$1)$  $(B \cup C)^{\complement} = B^{\complement} \cap C^{\complement}$       
-$2)$  $(B \cap C)^{\complement} = B^{\complement} \cup C^{\complement} $   
-更一般地，  
-$3)$ $A - (B \cup C) = (A - B) \cap (A-C)$   
-$4)$ $A - (B \cap C) = (A-B) \cup (A-C)$     
+> **德摩根律 (Demorgan)**  如果$A$ , $B$,  $C$ 为任意三个集合，我们有  
+> $1)$  $(B \cup C)^{\complement} = B^{\complement} \cap C^{\complement}$       
+> $2)$  $(B \cap C)^{\complement} = B^{\complement} \cup C^{\complement} $   
+> 更一般地，  
+> $3)$ $A - (B \cup C) = (A - B) \cap (A-C)$   
+> $4)$ $A - (B \cap C) = (A-B) \cup (A-C)$     
 
 **证明：** 只要证明 $3)$ 和 $4)$ 再把$A$ 替换为全集就能证明$1)$和 $2)$ .    
 我们来证明$A-(B \cup C) = (A-B) \cap (A-C)$ . 其余等式的证明作为练习.    
