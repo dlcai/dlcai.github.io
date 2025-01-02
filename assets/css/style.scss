@@ -1,0 +1,47 @@
+---
+---
+
+/*
+  If the number of TAB files has changed, the following variable is required.
+  And it must be defined before `@import`.
+*/
+$tab-count: {{ site.tabs | size | plus: 1 }}; // plus 1 for home tab
+
+@use "{{ site.theme }}";
+
+
+/* append your custom style below */
+h2, h3 {
+  //color: #202e80; /* 蓝色 */
+  //color: #191970; /* 蓝色 */
+  //color: #6495ED; /* 蓝色 */
+  //color: #4169E1; /* 蓝色 */
+  //color: #4064d8; /* 蓝色 */
+  //color: #2b408e; /* 与文章标题超链接相同的蓝色 */
+  color: #2d6095; /* 蓝色 */
+  //color: #4682B4; /* steelblue */
+  //color: #2e7092; /* 蓝绿色 */
+  //font-size: 24px;
+  //font-family: LXGWWenKai sans-serif;
+  //font-weight: regular;
+}
+
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.3rem; }
+
+p {
+}
+
+blockquote {
+    padding: 0.5rem 1rem;
+    border-left: 8px solid #E6F3FF;
+    background-color: #f0f8ff;
+    border-radius: 7px;
+}
+blockquote p {
+    font-style: normal;
+    color: #2e2e2e;  /* 黑色字体 */
+    margin: 0.1rem 0;
+}
+
+
