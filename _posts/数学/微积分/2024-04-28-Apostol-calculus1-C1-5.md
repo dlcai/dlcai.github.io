@@ -97,7 +97,7 @@ $$
 $$
 
 
-$\mathit{\underline{I}}(f) \le \bar{I}(f) \le \mathit{\underline{I}}(f)+ \frac{C}{n}$ 对所有正整数$n \ge 1$ 成立.  根据[阿基米德性质的推论(1.31)](../Apostol-calculus1-basics-p3-3#), 我们有$\bar{I}(f)=\mathit{\underline{I}}(f)$，这就证明了$f$ 在$[a,b]$上是可积的. 
+$\mathit{\underline{I}}(f) \le \bar{I}(f) \le \mathit{\underline{I}}(f)+ \frac{C}{n}$ 对所有正整数$n \ge 1$ 成立.  根据[阿基米德性质的推论(1.31)](../Apostol-calculus1-basics-p3-3), 我们有$\bar{I}(f)=\mathit{\underline{I}}(f)$，这就证明了$f$ 在$[a,b]$上是可积的. 
 
 
 
