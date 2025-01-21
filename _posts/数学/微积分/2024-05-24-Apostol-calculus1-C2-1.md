@@ -45,7 +45,7 @@ F=\{(x,y)\ |\ a \le x \le b,\ 0 \le y \lt f(x) \} \quad G=\{(x,y)\ |\  a \le x \
 $$
 
 
-也就是说， $G$是$g$的纵标集，$F$是$f$的纵标集减去$f$的图形. $f$和$g$的图形之间的区域$S$是这两点集之差$S = G - F$.  根据[定理I.10和定理I.11](https://deepmind.top/posts/Apostol-calculus1-C1-4/#118-%E6%8A%8A%E7%BA%B5%E6%A0%87%E9%9B%86%E7%9A%84%E9%9D%A2%E7%A7%AF%E8%A1%A8%E7%A4%BA%E4%B8%BA%E4%B8%80%E4%B8%AA%E7%A7%AF%E5%88%86) ，$F$和$G$都是可测的. 因为$F \subseteq G$ ，根据[面积公理的可减性](https://deepmind.top/posts/Apostol-calculus1-C1-2/#16-%E6%8A%8A%E9%9D%A2%E7%A7%AF%E7%9A%84%E6%A6%82%E5%BF%B5%E5%AE%9A%E4%B9%89%E4%B8%BA%E9%9B%86%E5%90%88%E5%87%BD%E6%95%B0) ，差集$S=G-F$ 也是可测的, 且面积等于两纵标集面积之差，即两非负函数积分之差，于是我们有
+也就是说， $G$是$g$的纵标集，$F$是$f$的纵标集减去$f$的图形. $f$和$g$的图形之间的区域$S$是这两点集之差$S = G - F$.  根据[定理I.10和定理I.11](https://deepmind.top/posts/Apostol-calculus1-C1-4/#118-%E6%8A%8A%E7%BA%B5%E6%A0%87%E9%9B%86%E7%9A%84%E9%9D%A2%E7%A7%AF%E8%A1%A8%E7%A4%BA%E4%B8%BA%E4%B8%80%E4%B8%AA%E7%A7%AF%E5%88%86) ，$F$和$G$都是可测的. 因为$F \subseteq G$ ，根据[面积公理的可减性](../Apostol-calculus1-C1-2/#16-%E6%8A%8A%E9%9D%A2%E7%A7%AF%E7%9A%84%E6%A6%82%E5%BF%B5%E5%AE%9A%E4%B9%89%E4%B8%BA%E9%9B%86%E5%90%88%E5%87%BD%E6%95%B0) ，差集$S=G-F$ 也是可测的, 且面积等于两纵标集面积之差，即两非负函数积分之差，于是我们有
 
 
 $$
