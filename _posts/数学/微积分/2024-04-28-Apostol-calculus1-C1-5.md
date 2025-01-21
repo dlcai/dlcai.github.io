@@ -21,9 +21,9 @@ tags: [积分学概念，积分理论，单调函数]
 
 **例1** 幂函数 (power functions).  如果$p$是一个正整数，则对所有 $0\le x \lt y$ ，我们有不等式
 $$
-x^p < y^p
+x < y
 $$
-成立. 以上结论由数学归纳法容易证得：当$p=1$时，$x\lt y$ 显然成立；假设对任意给定的正整数$k$，$x^k \lt y^k$  成立.此时有$x^{k+1} = x^k \cdot x \lt y^k \cdot x < y^k \cdot y = y^{k+1}$ 即$x^{k+1} \lt y^{k+1}$. $\#$  这表明对于全体实数$x$， 由等式$f(x)=x^p$ 定义的幂函数在非负实轴上是严格递增的. 由数学归纳法和实数的序公理推论也容易证明： 幂函数$f$在负实轴上也是单调的. ($p$为偶数时递减，$p$为奇数时递增). 因此, 幂函数在每个有限区间是分段单调的.
+成立. 以上结论由数学归纳法容易证得：当$p=1$时，$x\lt y$ 显然成立；假设对任意给定的正整数$k$，$x \lt y^k$  成立.此时有$x^{k+1} = x \cdot x \lt y \cdot x < y \cdot y = y^{k+1}$ 即$x^{k+1} \lt y^{k+1}$. $\#$  这表明对于全体实数$x$， 由等式$f(x)=x^p$ 定义的幂函数在非负实轴上是严格递增的. 由数学归纳法和实数的序公理推论也容易证明： 幂函数$f$在负实轴上也是单调的. ($p$为偶数时递减，$p$为奇数时递增). 因此, 幂函数在每个有限区间是分段单调的.
 
 **例2**  平方根函数 (square-root functions). 令$f(x)=\sqrt{x}$  ( $x \ge 0$ ). 这个函数在非负实轴上是严格递增的. 事实上，如果$0 \le x \lt y$ ，我们有
 $$
@@ -31,7 +31,7 @@ $$
 $$
 即$\sqrt{x} < \sqrt{y}$ 成立. 
 
-**例3** 由$g(x)=\sqrt{r^2-x^2}$ ($-r \le x \le r$) 定义的函数$g$的图形是一个半径为$r$的半圆. 这个函数在区间$[-r,0]$上是严格递增的, 在区间$[0,r]$上是单调递减的. 因此$g$在$[-r,r]$上是分段单调的.
+**例3** 由$g(x)=\sqrt{r-x}$ ($-r \le x \le r$) 定义的函数$g$的图形是一个半径为$r$的半圆. 这个函数在区间$[-r,0]$上是严格递增的, 在区间$[0,r]$上是单调递减的. 因此$g$在$[-r,r]$上是分段单调的.
 
 
 
@@ -52,8 +52,8 @@ $$
 
 $$
 \begin{align}
-\int_a^b t_n - \int_a^b s_n &= \sum_{k=1}^n f(x_k) (x_k-x_{k-1})-\sum_{k=1}^n f(x_{k-1})(x_k-x_{k-1}) \\
-&= \dfrac{b-a}{n}\sum_{k=1}^n [f(x_k)-f(x_{k-1})] \\
+\int_a t_n - \int_a s_n &= \sum_{k=1} f(x_k) (x_k-x_{k-1})-\sum_{k=1} f(x_{k-1})(x_k-x_{k-1}) \\
+&= \dfrac{b-a}{n}\sum_{k=1} [f(x_k)-f(x_{k-1})] \\
 &= \dfrac{b-a}{n}(f(x_1)-f(x_0)+f(x_2)-f(x_1) + \cdots + f(x_n)-f(x_{n-1})) \\
 &= \dfrac{b-a}{n} (f(x_n)-f(x_0)) = \dfrac{(b-a)[f(b)-f(a)]}{n} 
 \end{align}
@@ -61,15 +61,13 @@ $$
 
 
 
-
-
-最后一个等式描述的关系有一个简单的几何解释. $\int_a^b t_n - \int_a^b s_n$ 这个差等于图$1.35(a)$ 中阴影矩形面积之和. 把这些矩形滑动到右边，使它们落在一个共同的底上 (外阶梯区域第$n$个矩形的垂边上). 如图$1.35(b)$ 所示, 它们刚好填满一个底边长为$\dfrac{b-a}{n}$ , 高度为$f(b)-f(a)$ 的矩形,  所以阴影面积之和为$\dfrac{C}{n}$ , 其中$C = (b-a)[f(b)-f(a)]$.     
+最后一个等式描述的关系有一个简单的几何解释. $\int_a t_n - \int_a s_n$ 这个差等于图$1.35(a)$ 中阴影矩形面积之和. 把这些矩形滑动到右边，使它们落在一个共同的底上 (外阶梯区域第$n$个矩形的垂边上). 如图$1.35(b)$ 所示, 它们刚好填满一个底边长为$\dfrac{b-a}{n}$ , 高度为$f(b)-f(a)$ 的矩形,  所以阴影面积之和为$\dfrac{C}{n}$ , 其中$C = (b-a)[f(b)-f(a)]$.     
 
 现在我们把上述关系式重写为
 
 
 $$
-\int_a^b t_n - \int_a^b s_n =  \dfrac{C}{n} \tag{1.8}
+\int_a t_n - \int_a s_n =  \dfrac{C}{n} \tag{1.8}
 $$
 
 
@@ -78,17 +76,16 @@ $$
 
 
 $$
-\int_a^b s_n \le \mathit{\underline{I}}(f) \le \int_a^b t_n \quad 和 \quad
-\int_a^b s_n \le \bar{I}(f) \le \int_a^b t_n
+\int_a s_n \le \mathit{\underline{I}}(f) \le \int_a t_n \quad 和 \quad
+\int_a s_n \le \bar{I}(f) \le \int_a t_n
 $$
 
 
 
-这两组不等式. 用 $-1$乘第一组不等式右边部分得 $-\mathit{\underline{I}(f)} \le - \int_a^b s_n $ ，再加到第二组不等式右边部分上，我们有
-
+这两组不等式. 用 $-1$乘第一组不等式右边部分得 $-\mathit{\underline{I}(f)} \le - \int_a s_n$ ，再加到第二组不等式右边部分上，我们有
 
 $$
-\bar{I}(f) - \mathit{\underline{I}}(f) \le \int_a^b t_n - \int_a^b s_n
+\bar{I}(f) - \mathit{\underline{I}}(f) \le \int_a t_n - \int_a s_n
 $$
 
 
@@ -100,7 +97,7 @@ $$
 $$
 
 
-即$\mathit{\underline{I}}(f) \le \bar{I}(f) \le \mathit{\underline{I}}(f)+ \frac{C}{n} $ 对所有正整数$n \ge 1$ 成立.  根据[阿基米德性质的推论(定理I.31)](../Apostol-calculus1-basics-p3-3#i-310-%E5%AE%9E%E6%95%B0%E7%B3%BB%E7%9A%84%E9%98%BF%E5%9F%BA%E7%B1%B3%E5%BE%B7%E6%80%A7%E8%B4%A8), 我们有$\bar{I}(f)=\mathit{\underline{I}}(f)$，这就证明了$f$ 在$[a,b]$上是可积的. 
+$\mathit{\underline{I}}(f) \le \bar{I}(f) \le \mathit{\underline{I}}(f)+ \frac{C}{n}$ 对所有正整数$n \ge 1$ 成立.  根据[阿基米德性质的推论(1.31)](../Apostol-calculus1-basics-p3-3#), 我们有$\bar{I}(f)=\mathit{\underline{I}}(f)$，这就证明了$f$ 在$[a,b]$上是可积的. 
 
 
 
@@ -116,27 +113,27 @@ $$
 **定理1.13**  假设$f$在闭区间$[a,b]$上的递增的. 令$x_k = a + k(b-a)/n$  ($k=0,1,\cdots,n$) . 对所有$n\ge1$ 的正整数, 如果$I$是满足不等式
 
 $$
-\dfrac{b-a}{n}\sum_{k=0}^{n-1}f(x_k) \le I \le \dfrac{b-a}{n}\sum_{k=1}^n f(x_k) \tag{1.9}
+\dfrac{b-a}{n}\sum_{k=0}^{n-1}f(x_k) \le I \le \dfrac{b-a}{n}\sum_{k=1} f(x_k) \tag{1.9}
 $$
 
 
-的任何一个数，则$I = \int_a^b f(x)dx$.  
+的任何一个数，则$I = \int_a f(x)dx$.  
 
 **证明：** 如同定理$1.12$的证明中描述的那样，令$s_n$和$t_n$ 是把$[a.b]$ 区间$n$等分得到的两个特殊的近似阶梯函数.  不等式$(1.9)$ 指出，对所有$n \ge 1$ 的正整数，有
 
 
 $$
-\int_a^b s_n \le I \le \int_a^b t_n  \qquad \tag{1}
+\int_a s_n \le I \le \int_a t_n  \qquad \tag{1}
 $$
 
 
- 由有界函数积分的定义，积分$\int_a^b f(x)dx$ 也满足
+由有界函数积分的定义，积分$\int_a f(x)dx$ 也满足
 
 
 
 
 $$
-\int_a^b s_n \le \int_a^b f(x) dx \le \int_a^b t_n  \qquad \tag{2}
+\int_a s_n \le \int_a f(x) dx \le \int_a t_n  \qquad \tag{2}
 $$
 
 
@@ -146,7 +143,7 @@ $(2)$乘上$-1$得：
 
 
 $$
-- \int_a^b t_n \le - \int_a^b f(x)\ dx \le -\int_a^b s_n \qquad \tag{3}
+- \int_a t_n \le - \int_a f(x)\ dx \le -\int_a s_n \qquad \tag{3}
 $$
 
 
@@ -154,7 +151,7 @@ $$
 $(3)+(1)$ 得：
 
 $$
--(\int_a^b t_n - \int_a^b s_n) \le I - \int_a^b f(x)\ dx \le \int_a^b t_n - \int_a^b s_n
+-(\int_a t_n - \int_a s_n) \le I - \int_a f(x)\ dx \le \int_a t_n - \int_a s_n
 $$
 
 
@@ -164,20 +161,20 @@ $$
 
 
 $$
-\left| I - \int_a^b f(x)\ dx \right| \le \dfrac{C}{n} \qquad \tag{4}
+\left| I - \int_a f(x)\ dx \right| \le \dfrac{C}{n} \qquad \tag{4}
 $$
 
 
 
-如果$I > \int_a^b f(x)dx$ , $(4)$ 变为: $I - \int_a^b f(x)dx \le \frac{C}{n}$ .  此时因为$I - \int_a^b f(x)dx >0$,  由阿基米德性质，对任意实数$C$，存在正整数$n$ 使得 $n(I-\int_a^b f(x)dx) > C$ 即 $I-\int_a^b f(x)dx > \frac{C}{n}$ 与$(4)$ 矛盾.  
+如果$I > \int_a f(x)dx$ , $(4)$ 变为: $I - \int_a f(x)dx \le \frac{C}{n}$ .  此时因为$I - \int_a f(x)dx >0$,  由阿基米德性质，对任意实数$C$，存在正整数$n$ 使得 $n(I-\int_a f(x)dx) > C$ 即 $I-\int_a f(x)dx > \frac{C}{n}$ 与$(4)$ 矛盾.  
 
 
 
-如果$I < \int_a^b f(x)dx$, $(4)$ 变为：$\int_a^b f(x)dx - I \le \frac{C}{n}$. 此时因为$\int_a^b f(x)dx - I >0$ , 由阿基米德性质，存在正整数$n$ 使得$n(\int_a^b f(x)dx-I) > C$ 即 $\int_a^b f(x)dx - I > \frac{C}{n}$ . 这也与$(4)$ 矛盾.
+如果$I < \int_a f(x)dx$, $(4)$ 变为：$\int_a f(x)dx - I \le \frac{C}{n}$. 此时因为$\int_a f(x)dx - I >0$ , 由阿基米德性质，存在正整数$n$ 使得$n(\int_a f(x)dx-I) > C$ 即 $\int_a f(x)dx - I > \frac{C}{n}$ . 这也与$(4)$ 矛盾.
 
 
 
-所以，$I = \int_a^b f(x)dx$.   $\#$
+所以，$I = \int_a f(x)dx$.   $\#$
 
 同理，类似的论证可给出递减函数情况下对应定理的证明.
 
@@ -185,21 +182,21 @@ $$
 
 
 $$
-\dfrac{b-a}{n}\sum_{k=1}^n f(x_k) \le I \le \dfrac{b-a}{n}\sum_{k=0}^{n-1} f(x_k)
+\dfrac{b-a}{n}\sum_{k=1} f(x_k) \le I \le \dfrac{b-a}{n}\sum_{k=0}^{n-1} f(x_k)
 $$
 
 
-则$I = \int_a^b f(x) dx$.  
+则$I = \int_a f(x) dx$.  
 
 
 
-## 1.23 积分 $\int_{0}^b x^p dx \ (p为正整数)$ 的计算 
+## 1.23 积分 $\int_{0} x dx \ (p为正整数)$ 的计算 
 
-为了说明定理$1.13$的用法，我们来计算积分$\int_{0}^b x^p dx$，其中$b>0$ 且$p$是正整数. 因为被积函数在$[a,b]$ 上有界且单调递增，所以这个积分是存在的. 
+为了说明定理$1.13$的用法，我们来计算积分$\int_{0} x dx$，其中$b>0$ 且$p$是正整数. 因为被积函数在$[a,b]$ 上有界且单调递增，所以这个积分是存在的. 
 
 **定理1.15**  如果$p$为正整数且$b>0$ ，我们有
 $$
-\int_0^b x^p\ dx = \dfrac{b^{p+1}}{p+1}
+\int_0 x\ dx = \dfrac{b^{p+1}}{p+1}
 $$
 
 
@@ -207,7 +204,7 @@ $$
 
 
 $$
-\sum_{k=1}^{n-1}k^p \lt  \dfrac{n^{p+1}}{p+1}  \lt \sum_{k=1}^n k^p
+\sum_{k=1}^{n-1}k \lt  \dfrac{n^{p+1}}{p+1}  \lt \sum_{k=1} k
 $$
 
 
@@ -217,7 +214,7 @@ $$
 
 
 $$
-\dfrac{b}{n} \sum_{k=1}^{n-1}\left( \dfrac{kb}{n} \right)^p \lt \dfrac{b^{p+1}}{p+1} \lt \dfrac{b}{n} \sum_{k=1}^{n}\left( \dfrac{kb}{n} \right)^p
+\dfrac{b}{n} \sum_{k=1}^{n-1}\left( \dfrac{kb}{n} \right) \lt \dfrac{b^{p+1}}{p+1} \lt \dfrac{b}{n} \sum_{k=1}^{n}\left( \dfrac{kb}{n} \right)
 $$
 
 
@@ -233,7 +230,7 @@ $$
 
 
 
-$f(x)=x^p$ 在$[0,b]$ 上单调递增，根据**定理1.13** (单调有界函数积分的计算方法) ，这组不等式恰好是$(1.9)$ 在$f(x)=x^p ,\ a=0,\ I = \dfrac{b^{p+1}}{p+1}$ 时的情形，所以$\int_0^b x^p dx = \dfrac{b^{p+1}}{p+1}$.    $\#$
+$f(x)=x^p$ 在$[0,b]$ 上单调递增，根据**定理1.13** (单调有界函数积分的计算方法) ，这组不等式恰好是$(1.9)$ 在$f(x)=x ,\ a=0,\ I = \dfrac{b^{p+1}}{p+1}$ 时的情形，所以$\int_0 x dx = \dfrac{b^{p+1}}{p+1}$.    $\#$
 
 
 
@@ -245,7 +242,7 @@ $f(x)=x^p$ 在$[0,b]$ 上单调递增，根据**定理1.13** (单调有界函数
 
 
 $$
-\int_a^b [c_1f(x)+c_2g(x)]\ dx = c_1 \int_a^b f(x)\ dx + c_2\int_a^b g(x)\ dx
+\int_a [c_1f(x)+c_2g(x)]\ dx = c_1 \int_a f(x)\ dx + c_2\int_a g(x)\ dx
 $$
 
 
@@ -254,23 +251,23 @@ $$
 
 
 $$
-\int_a^b \sum_{k=1}^{n}c_kf_k(x)\ dx = \sum_{k=1}^{n} c_k\int_a^b f_k(x)\ dx
+\int_a \sum_{k=1}^{n}c_kf_k(x)\ dx = \sum_{k=1}^{n} c_k\int_a f_k(x)\ dx
 $$
 
 
 **定理1.17** **关于积分区间的可加性**   如果以下三个积分有两个积分存在，则第三个积分也存在. 并且我们有
 $$
-\int_a^b f(x)\ dx + \int_b^c f(x)\ dx = \int_a^c f(x)\ dx
+\int_a f(x)\ dx + \int_b f(x)\ dx = \int_a f(x)\ dx
 $$
 
 
-注：如果$f$在$[a,b]$上是单调的，在$[b, c]$上也是单调的，则积分$\int_a^b f$ 和 $\int_b^c f$ 都存在，所以$\int_a^c f$ 也存在，并且等于另外两个积分之和.
+注：如果$f$在$[a,b]$上是单调的，在$[b, c]$上也是单调的，则积分$\int_a f$ 和 $\int_b f$ 都存在，所以$\int_a f$ 也存在，并且等于另外两个积分之和.
 
 **定理1.18  平移不变性**    如果$f$在$[a,b]$上可积，则对每个实数$c$，我们有
 
 
 $$
-\int_a^b f(x)\ dx = \int_{a+c}^{b+c} f(x-c)\ dx
+\int_a f(x)\ dx = \int_{a+c}^{b+c} f(x-c)\ dx
 $$
 
 
@@ -278,7 +275,7 @@ $$
 
 
 $$
-\int_a^b f(x)\ dx = \dfrac{1}{k} \int_{ka}^{kb} f(\dfrac{x}{k})\ dx
+\int_a f(x)\ dx = \dfrac{1}{k} \int_{ka}^{kb} f(\dfrac{x}{k})\ dx
 $$
 
 
@@ -288,11 +285,11 @@ $$
 
 
 $$
-\int_a^b g(x)\ dx \le \int_a^b f(x)\ dx
+\int_a g(x)\ dx \le \int_a f(x)\ dx
 $$
 
 
-定理$1.20$一个重要的特例是当对每个$x$ 都有$g(x)=0$ 时.  在这种情况下，定理指出如果在$[a,b]$上处处有$f(x)\ge 0$ ，则有$\int_a^b f(x)\ dx \ge 0$.  换句话说，非负函数具有非负的积分. 还能证明：如果严格不等式$g(x) < f(x)$ 对$[a,b]$内所有$x$都成立, 则对于它们的积分，同样的严格不等式也成立，但这个阶段不易给出证明.
+定理$1.20$一个重要的特例是当对每个$x$ 都有$g(x)=0$ 时.  在这种情况下，定理指出如果在$[a,b]$上处处有$f(x)\ge 0$ ，则有$\int_a f(x)\ dx \ge 0$.  换句话说，非负函数具有非负的积分. 还能证明：如果严格不等式$g(x) < f(x)$ 对$[a,b]$内所有$x$都成立, 则对于它们的积分，同样的严格不等式也成立，但这个阶段不易给出证明.
 
 在第5章中我们将讨论各种计算积分值的方法，这些方法无须利用定义. 然而，这些方法仅适用于少数的函数，对于大多数可积函数，积分的实际数值只能通过估计来得出. 这通常由阶梯函数或其他可以精确计算积分值的简单函数从上和从下逼近被积函数，然后应用比较定理来得到所求函数积分的近似值. 在第7章“函数的多项式逼近”中我们将对这种思想进行更充分的探讨.
 
@@ -302,7 +299,7 @@ $$
 
 
 $$
-\int_{0}^b x^p \ dx = \dfrac{b^{p+1}}{p+1}
+\int_{0} x \ dx = \dfrac{b^{p+1}}{p+1}
 $$
 
 对$b > 0$ 和任意正整数$p$ 都成立.  这个公式对$b=0$也成立，因为此时积分限都为0. 利用定理$1.19$ , 我们可以证明积分公式对于负的积分上限也成立. 我们只要在定理$1.19$ 中取$k = -1, a = 0, f(x)=x^p$ 就得到
@@ -311,9 +308,9 @@ $$
 
 $$
 \begin{align}
-\int_{0}^{b} x^p\ dx = - \int_{0}^{-b} (-x)^p \ dx  \hspace{-14em} \\
-&\Longrightarrow  \dfrac{b^{p+1}}{p+1} = (-1)^{p+1} \int_{0}^{-b}  x^p\ dx \\
-&\Longrightarrow \int_{0}^{-b}  x^p\ dx = \dfrac{b^{p+1}}{(-1)^{p+1}} \cdot \dfrac{1}{p+1} = \dfrac{(-b)^{p+1}}{p+1}
+\int_{0}^{b} x\ dx = - \int_{0}^{-b} (-x) \ dx  \hspace{-14em} \\
+&\Longrightarrow  \dfrac{b^{p+1}}{p+1} = (-1)^{p+1} \int_{0}^{-b}  x\ dx \\
+&\Longrightarrow \int_{0}^{-b}  x\ dx = \dfrac{b^{p+1}}{(-1)^{p+1}} \cdot \dfrac{1}{p+1} = \dfrac{(-b)^{p+1}}{p+1}
 \end{align}
 $$
 
@@ -323,8 +320,8 @@ $$
 
 $$
 \begin{align}
-\int_a^b x^p\ dx &= \int_{a}^{0} x^p\ dx + \int_{0}^b x^p\ dx \\
-&= \int_{0}^b x^p\ dx - \int_{0}^{a} x^p\ dx \\
+\int_a x\ dx &= \int_{a}^{0} x\ dx + \int_{0} x\ dx \\
+&= \int_{0} x\ dx - \int_{0}^{a} x\ dx \\
 &= \dfrac{b^{p+1}}{p+1} - \dfrac{a^{p+1}}{p+1} 
 \end{align}
 $$
@@ -334,7 +331,7 @@ $$
 
 
 $$
-\int_a^b x^p\ dx = \dfrac{b^{p+1}-a^{p+1}}{p+1}
+\int_a x\ dx = \dfrac{b^{p+1}-a^{p+1}}{p+1}
 $$
 
 
@@ -346,7 +343,7 @@ $$
 
 
 $$
-P(x) \left|_a^b\right.
+P(x) \left|_a\right.
 $$
 
 
@@ -354,18 +351,18 @@ $$
 
 
 $$
-\int_a^b x^p\ dx = \left. \dfrac{x^{p+1}}{p+1} \right|_a^b = \dfrac{b^{p+1}-a^{p+1}}{p+1}
+\int_a x\ dx = \left. \dfrac{x^{p+1}}{p+1} \right|_a = \dfrac{b^{p+1}-a^{p+1}}{p+1}
 $$
 
 
-利用幂函数积分公式，再结合积分的线性性，我们可以计算出任意多项式函数的积分. 例如，为了计算积分$\int_1^3 (x^2-3x+5)\ dx  $ , 我们先求每项的积分，然后把结果加起来. 于是我们有
+利用幂函数积分公式，再结合积分的线性性，我们可以计算出任意多项式函数的积分. 例如，为了计算积分$\int_1 (x-3x+5)\ dx  $ , 我们先求每项的积分，然后把结果加起来. 于是我们有
 
 
 $$
 \begin{align}
-\int_1^3 (x^2-3x+5)\ dx &= \int_1^3 x^2\ dx - 3\int_1^3 x\ dx + 5\int_1^3 dx \\
-&= \left. \dfrac{x^3}{3} \right|_1^3  -3\cdot \left. \dfrac{x^2}{2}\right|_1^3 + 5 \cdot \left. x \right|_1^3 \\
-&= \dfrac{3^3-1}{3}- 3 \cdot \dfrac{3^2-1}{2} + 5 \cdot (3-1) \\
+\int_1 (x-3x+5)\ dx &= \int_1 x\ dx - 3\int_1 x\ dx + 5\int_1 dx \\
+&= \left. \dfrac{x}{3} \right|_1  -3\cdot \left. \dfrac{x}{2}\right|_1 + 5 \cdot \left. x \right|_1 \\
+&= \dfrac{3-1}{3}- 3 \cdot \dfrac{3-1}{2} + 5 \cdot (3-1) \\
 &= \dfrac{26}{3} - 12 + 10 = \dfrac{20}{3}
 \end{align}
 $$
@@ -377,7 +374,7 @@ $$
 
 
 $$
-\int_a^b \sum_{k=0}^n c_k x^k \ dx  = \sum_{k=0}^n c_k \int_a^b x^k \ dx = \sum_{k=0}^n c_k \dfrac{b^{k+1}-a^{k+1}}{k+1}
+\int_a \sum_{k=0} c_k x \ dx  = \sum_{k=0} c_k \int_a x \ dx = \sum_{k=0} c_k \dfrac{b^{k+1}-a^{k+1}}{k+1}
 $$
 
 
@@ -385,16 +382,16 @@ $$
 
 
 
-我们也能对由不同多项式组成的更复杂函数进行积分. 例如，考虑积分$\int_0^1 \| x(2x-1)\|dx $ .  因为绝对值符号，被积函数不是一个多项式，然而考虑$x(2x-1)$ 的符号，我们可以把区间$[0,1]$分成两个子区间，在每个子区间上被积函数是一个多项式，当$x$从$0$变化到$1$时，乘积$x(2x-1)$在点$x=\dfrac{1}{2}$ 处改变符号. 当$0 < x < \dfrac{1}{2}$ 时乘积是负的，当$\dfrac{1}{2} < x < 1$ 时乘积是正的. 因此，利用积分的可加性我们有
+我们也能对由不同多项式组成的更复杂函数进行积分. 例如，考虑积分$\int_0 \| x(2x-1)\|dx $ .  因为绝对值符号，被积函数不是一个多项式，然而考虑$x(2x-1)$ 的符号，我们可以把区间$[0,1]$分成两个子区间，在每个子区间上被积函数是一个多项式，当$x$从$0$变化到$1$时，乘积$x(2x-1)$在点$x=\dfrac{1}{2}$ 处改变符号. 当$0 < x < \dfrac{1}{2}$ 时乘积是负的，当$\dfrac{1}{2} < x < 1$ 时乘积是正的. 因此，利用积分的可加性我们有
 
 
 $$
 \begin{align}
-\int_0^1 \left|x(2x-1)\right| dx &= \int_0^{1/2} \left|x(2x-1)\right| dx + \int_{1/2}^1 \left|x(2x-1)\right| dx \\
-&= \int_0^{1/2} - [x(2x-1)] dx + \int_{1/2}^1 x(2x-1)dx \\
-&= -\int_0^{1/2} x(2x-1) dx + \int_{1/2}^1 x(2x-1)dx \\
-&= - (2 \int_0^{1/2}x^2 dx - \int_0^{1/2} x dx) +(2 \int_{1/2}^{1}x^2 dx - \int_{1/2}^{1} x dx)\\ 
-&= \left.\dfrac{x^2}{2}\right|_{0}^{1/2} - 2\cdot \left.\dfrac{x^3}{3}\right|_{0}^{1/2} + 2\cdot \left.\dfrac{x^3}{3}\right|_{1/2}^{1} - \left.\dfrac{x^2}{2}\right|_{1/2}^{1} \\
+\int_0 \left|x(2x-1)\right| dx &= \int_0^{1/2} \left|x(2x-1)\right| dx + \int_{1/2} \left|x(2x-1)\right| dx \\
+&= \int_0^{1/2} - [x(2x-1)] dx + \int_{1/2} x(2x-1)dx \\
+&= -\int_0^{1/2} x(2x-1) dx + \int_{1/2} x(2x-1)dx \\
+&= - (2 \int_0^{1/2}x dx - \int_0^{1/2} x dx) +(2 \int_{1/2}^{1}x dx - \int_{1/2}^{1} x dx)\\ 
+&= \left.\dfrac{x}{2}\right|_{0}^{1/2} - 2\cdot \left.\dfrac{x}{3}\right|_{0}^{1/2} + 2\cdot \left.\dfrac{x}{3}\right|_{1/2}^{1} - \left.\dfrac{x}{2}\right|_{1/2}^{1} \\
 &= \dfrac{1}{8} - \dfrac{1}{12} + 2(\dfrac{1}{3}-\dfrac{1}{24}) - (\dfrac{1}{2}-\dfrac{1}{8})\\
 &= \dfrac{1}{8} - \dfrac{1}{12} + \dfrac{7}{12} - \dfrac{1}{2} + \dfrac{1}{8}\\
 &= \dfrac{1}{4}
