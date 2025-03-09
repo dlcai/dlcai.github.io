@@ -9,13 +9,13 @@ tags: [微积分基础，证明方法]
 
 当我们对整数$k$ 加1时总能得到更大的整数$k+1$, 所以不存在最大的整数。然而从数$1$开始，连续地通过有限个加1的步骤，每步从$k$ 到$k+1$, 我们可以取得任意大的正整数。这就是被数学家称为归纳证法 (**proof by induction**) 的一类推理的基础。我们通过第1节中计算抛物线弓形面 (parabolic segment) 的面积所用到的不等式：
 $$
-1+2+\cdots + (n-1) < \dfrac{n}{3} < 1+2+\cdots +n  \tag{I.19}
+1^2+2^2+\cdots + (n-1)^2 < \dfrac{n^3}{3} < 1^2+2^2+\cdots +n^2  \tag{I.19}
 $$
 
 
 来说明归纳证法的用法。我们先考虑左边的不等式，记为$A(n)$ (包含变量$n$的断言).   对于最前面几个$n$值，很容易验证这个断言成立，例如取$n = 1, 2, 3$, 断言变为：
 $$
-A(1): 0<\dfrac{1}{3},\quad A(2):1<\dfrac{2}{3},\quad A(3): 1+2<\dfrac{3}{3}
+A(1): 0<\dfrac{1^3}{3},\quad A(2):1^2<\dfrac{2^3}{3},\quad A(3): 1^2+2^2<\dfrac{3^3}{3}
 $$
 
 
@@ -25,7 +25,7 @@ $$
 
 
 $$
-A(k): 1+2+\cdots +(k-1) < \dfrac{k}{3}
+A(k): 1^2+2^2+\cdots +(k-1)^2 < \dfrac{k^3}{3}
 $$
 
 
@@ -33,7 +33,7 @@ $$
 
 
 $$
-A(k+1): 1+2+\cdots +k < \dfrac{(k+1)}{3}
+A(k+1): 1^2+2^2+\cdots +k^2 < \dfrac{(k+1)^3}{3}
 $$
 
 
@@ -43,7 +43,7 @@ $$
 
 
 $$
-1+2+\cdots +(k-1) + k < \dfrac{k}{3}+k
+1^2+2^2+\cdots +(k-1)^2 + k^2 < \dfrac{k^3}{3}+k^2
 $$
 
 
@@ -51,7 +51,7 @@ $$
 
 
 $$
-\dfrac{k}{3}+k < \dfrac{(k+1)}{3}
+\dfrac{k^3}{3}+k^2 < \dfrac{(k+1)^3}{3}
 $$
 
 
@@ -60,7 +60,7 @@ $$
 
 
 $$
-\dfrac{(k+1)}{3} = \dfrac{k+3k+3k+1}{3} = \dfrac{k}{3}+k+k+\dfrac{1}{3}
+\dfrac{(k+1)^3}{3} = \dfrac{k^3+3k^2+3k+1}{3} = \dfrac{k^3}{3}+k^2+k+\dfrac{1}{3}
 $$
 
 
@@ -100,7 +100,7 @@ $(b)$ 如果正整数$k$ 在$S$ 中，则$k+1$ 也在$S$ 中.
 
 
 $$
-A(n): 1+2+\cdots + n = \dfrac{n}{3} + \dfrac{n}{2} + \dfrac{n}{6}
+A(n): 1^2+2^2+\cdots + n^2 = \dfrac{n^3}{3} + \dfrac{n^2}{2} + \dfrac{n}{6}
 $$
 
 
@@ -108,7 +108,7 @@ $$
 
 
 $$
-A(1): 1 =  \dfrac{1}{3}+ \dfrac{1}{2}+\dfrac{1}{6}
+A(1): 1^2 =  \dfrac{1^3}{3}+ \dfrac{1^2}{2}+\dfrac{1}{6}
 $$
 
 
@@ -123,7 +123,7 @@ $(\mathrm{ii})$ 至少存在一个正整数$n$ 使得$A(n)$ 为假.
 
 
 $$
-A(k-1):\ 1+2+\cdots+(k-1) = \dfrac{(k-1)}{3} + \dfrac{(k-1)}{2} + \dfrac{k-1}{6}
+A(k-1):\ 1^2+2^2+\cdots+(k-1)^2 = \dfrac{(k-1)^3}{3} + \dfrac{(k-1)^2}{2} + \dfrac{k-1}{6}
 $$
 
 
@@ -135,10 +135,10 @@ $$
 $$
 \require{enclose}
 \begin{align}
-1+2+\cdots+k &= \dfrac{k+3k(-1)+3k(-1)+(-1)}{3} + \dfrac{k-2k+1}{2}+k+\dfrac{k-1}{6} \\
-&= \dfrac{k-3k+3k-1}{3}+\dfrac{k-2k+1}{2} + k + \dfrac{k-1}{6} \\
-&= \dfrac{k}{3} \enclose{horizontalstrike}{-k} \enclose{horizontalstrike}{+k}-\dfrac{1}{3} +\dfrac{k}{2}\enclose{horizontalstrike}{-k}+\dfrac{1}{2} + \enclose{horizontalstrike}{k} +\dfrac{k}{6}-\dfrac{1}{6} \\
-&=\dfrac{k}{3}+\dfrac{k}{2}+\dfrac{k}{6}
+1^2+2^2+\cdots+k^2 &= \dfrac{k^3+3k^2(-1)+3k(-1)^2+(-1)^3}{3} + \dfrac{k^2-2k+1}{2}+k^2+\dfrac{k-1}{6} \\
+&= \dfrac{k^3-3k^2+3k-1}{3}+\dfrac{k^2-2k+1}{2} + k^2 + \dfrac{k-1}{6} \\
+&= \dfrac{k^3}{3} \enclose{horizontalstrike}{-k^2} \enclose{horizontalstrike}{+k}-\dfrac{1}{3} +\dfrac{k^2}{2}\enclose{horizontalstrike}{-k}+\dfrac{1}{2} + \enclose{horizontalstrike}{k^2} +\dfrac{k}{6}-\dfrac{1}{6} \\
+&=\dfrac{k^3}{3}+\dfrac{k^2}{2}+\dfrac{k}{6}
 \end{align}
 $$
 
@@ -158,7 +158,7 @@ $$
 
 
 $$
-1+2+3+\cdots +n  \tag{I.20}
+1^2+2^2+3^2+\cdots +n^2  \tag{I.20}
 $$
 
 
@@ -166,11 +166,11 @@ $$
 
 
 $$
-\sum_{k=1}^{n} k
+\sum_{k=1}^{n} k^2
 $$
 
 
-这个记法读作“对$k$取$1$到$n$的$k^2$的和” (The sum of $k^2$ for $k$ running from $1$ to $n$) .  sigma符号上下方的数字告诉我们$k$的取值范围。字母$k$被称为求和指标 (index of summation) .  当然，变量名用什么字母表示并不重要，$k$ 可以用任何方便的字母来替换，例如，除了$\sum \limits_{k=1} k^2$ 我们可以用$\sum \limits_{i=1}^{n} i^2$,  $\sum \limits_{j=1} j^2$, $\sum \limits_{m=1} m^2$ 等等可选的记号来表示同一个和式.  以这种方式使用的$i,j,k.m$ 等字母被称为哑指标 (dummy indices). 在这个例子中，字母$n$已经被用来表示项数，所以$n$不适合作为哑指标.  
+这个记法读作“对$k$取$1$到$n$的$k^2$的和” (The sum of $k^2$ for $k$ running from $1$ to $n$) .  sigma符号上下方的数字告诉我们$k$的取值范围。字母$k$被称为求和指标 (index of summation) .  当然，变量名用什么字母表示并不重要，$k$ 可以用任何方便的字母来替换，例如，除了$\sum \limits_{k=1}^n k^2$ 我们可以用$\sum \limits_{i=1}^{n} i^2$,  $\sum \limits_{j=1}^n j^2$, $\sum \limits_{m=1}^n m^2$ 等等可选的记号来表示同一个和式.  以这种方式使用的$i,j,k.m$ 等字母被称为哑指标 (dummy indices). 在这个例子中，字母$n$已经被用来表示项数，所以$n$不适合作为哑指标.  
 
 更一般地，当我们想要构造若干实数的和，比如$a_1,\cdots,a_n$， 我们用以下记号来表示这样的和：  
 
@@ -184,7 +184,7 @@ $$
 
 
 $$
-\sum\limits_{k=1} a_k  \tag{I.22}
+\sum\limits_{k=1}^n a_k  \tag{I.22}
 $$
 
 
@@ -194,8 +194,8 @@ $$
 
 $$
 \begin{align}
-\sum \limits_{k=1} a_k &=  a_1+ a_2+a_3+a_4 \\
-\sum \limits_{i=1} x_i &= x_1 + x_2 + x_3 +x_4 + x_5
+\sum \limits_{k=1}^4 a_k &=  a_1+ a_2+a_3+a_4 \\
+\sum \limits_{i=1}^5 x_i &= x_1 + x_2 + x_3 +x_4 + x_5
 \end{align}
 $$
 
@@ -206,8 +206,8 @@ $$
 
 $$
 \begin{align}
-\sum \limits_{i=0} x_i &= x_0 + x_1 + x_2 + x_3 + x_4 \\
-\sum \limits_{n=2} n &= 2 + 3 + 4 + 5
+\sum \limits_{i=0}^4 x_i &= x_0 + x_1 + x_2 + x_3 + x_4 \\
+\sum \limits_{n=2}^5 n^3 &= 2^3 + 3^3 + 4^3 + 5^3
 \end{align}
 $$
 
@@ -217,8 +217,8 @@ $$
 
 $$
 \begin{align}
-\sum \limits_{m=0} x^{m+1} &= x + x + x + x + x \\
-\sum \limits_{j=1} 2^{j-1} &= 1 + 2 + 2 + 2 + 2 + 2
+\sum \limits_{m=0}^4 x^{m+1} &= x + x^2 + x^3 + x^4 + x^5 \\
+\sum \limits_{j=1}^6 2^{j-1} &= 1 + 2 + 2^2 + 2^3 + 2^4 + 2^5
 \end{align}
 $$
 
@@ -228,7 +228,7 @@ $$
 
 
 $$
-\sum \limits_{q=1} 2^{q-1} = \sum\limits_{r=0} 2 = \sum\limits_{n=0} 2^{5-n} = \sum\limits_{k=1} 2^{6-k}
+\sum \limits_{q=1}^6 2^{q-1} = \sum\limits_{r=0}^5 2^r = \sum\limits_{n=0}^5 2^{5-n} = \sum\limits_{k=1}^6 2^{6-k}
 $$
 
 
@@ -243,11 +243,11 @@ $$
 $$
 
 
-$(b)$ 假设对固定$n \ge 1$ 我们已经定义了$\sum \limits_{k=1} a_k$ , 我们进一步定义
+$(b)$ 假设对固定$n \ge 1$ 我们已经定义了$\sum \limits_{k=1}^n a_k$ , 我们进一步定义
 
 
 $$
-\sum \limits_{k=1}^{n+1} a_k = \sum \limits_{k=1} a_k + a_{n+1}
+\sum \limits_{k=1}^{n+1} a_k = \sum \limits_{k=1}^n a_k + a_{n+1}
 $$
 
 
@@ -255,11 +255,11 @@ $$
 
 
 $$
-\sum \limits_{k=1} a_k = \sum \limits_{k=1}^{1} a_k + a_{n+1} = a_1 + a_2
+\sum \limits_{k=1}^2 a_k = \sum \limits_{k=1}^{1} a_k + a_{n+1} = a_1 + a_2
 $$
 
 
-现在已经定义了$\sum \limits_{k=1} a_k$ , 令$(b)$ 中$n=2$ 可得：
+现在已经定义了$\sum \limits_{k=1}^2 a_k$ , 令$(b)$ 中$n=2$ 可得：
 
 
 $$
@@ -276,7 +276,7 @@ $$
 $$
 
 
-我们能证明$(a_1+a_2+a_3) + a_4$ 与 $(a_1+a_2)+(a_3+a_4)$ 或 $a_1+(a_2+a_3+a_4)$ 相同。因此我们可以再次省略括号并定义 $\sum \limits_{k=1} a_k = a_1+a_2+a_3+a_4$ . 继续用这种方法，我们发现$(a)$和$(b)$两个步骤给出了$\sum \limits_{k=1} a_k$ $(I.22)$ 的完整定义。$(I.21)$ 的和式只是$(I.22)$ 一种可选的书写方式. 它可用一般的加法结合律来证明，这里我们不尝试证明。  
+我们能证明$(a_1+a_2+a_3) + a_4$ 与 $(a_1+a_2)+(a_3+a_4)$ 或 $a_1+(a_2+a_3+a_4)$ 相同。因此我们可以再次省略括号并定义 $\sum \limits_{k=1}^4 a_k = a_1+a_2+a_3+a_4$ . 继续用这种方法，我们发现$(a)$和$(b)$两个步骤给出了$\sum \limits_{k=1}^n a_k$ $(I.22)$ 的完整定义。$(I.21)$ 的和式只是$(I.22)$ 一种可选的书写方式. 它可用一般的加法结合律来证明，这里我们不尝试证明。  
 读者应该注意到归纳法定义和归纳证明包含相同的思想。归纳法定义也被称为**递归定义**.
 
 
@@ -376,14 +376,14 @@ $- \vert x-y \vert  \le  \vert x \vert - \vert y \vert  \le  \vert x-y \vert$   
 $\bigl\vert \vert x \vert - \vert y \vert  \bigr\vert \le  \vert x-y \vert$ 即 $\vert x-y \vert  \ge \bigl\vert \vert x \vert - \vert y \vert \bigr\vert$ 得证.       
 
 
-                        
+​                        
 利用数学归纳法，我们可以把三角不等式推广到以下形式：
 
 **定理I.40** $\quad$对任意实数$a_1, a_2, \cdots a_n$, 我们有：  
 
 
 $$
-\bigg| \sum \limits_{k=1} a_k \bigg|  \le \sum \limits_{k=1} |a_k|
+\bigg| \sum \limits_{k=1}^n a_k \bigg|  \le \sum \limits_{k=1}^n |a_k|
 $$
 
 
@@ -391,7 +391,7 @@ $$
 
 
 $$
-\bigg| \sum \limits_{k=1}^{n+1} a_k \bigg|=\bigg|\sum \limits_{k=1} a_k + a_{n+1}\bigg| \le \bigg| \sum \limits_{k=1} a_k\bigg| + |a_{n+1}| \le \sum \limits_{k=1} |a_k| + |a_{n+1}| = \sum \limits_{k=1}^{n+1} |a_k| 
+\bigg| \sum \limits_{k=1}^{n+1} a_k \bigg|=\bigg|\sum \limits_{k=1}^n a_k + a_{n+1}\bigg| \le \bigg| \sum \limits_{k=1}^n a_k\bigg| + |a_{n+1}| \le \sum \limits_{k=1}^n |a_k| + |a_{n+1}| = \sum \limits_{k=1}^{n+1} |a_k| 
 $$
 
 
@@ -405,50 +405,50 @@ $$
 
 
 $$
-\biggl( \sum \limits_{k=1} a_kb_k \biggr) \le \biggl(\sum \limits_{k=1} a_k \biggr) \biggl( \sum \limits_{k=1} b_k \biggr)
+\biggl( \sum \limits_{k=1}^n a_kb_k \biggr)^2 \le \biggl(\sum \limits_{k=1}^n a_k^2 \biggr) \biggl( \sum \limits_{k=1}^n b_k^2 \biggr)
 $$
 
 
 等号成立当且仅当存在实数$x$ 使得 $a_kx+b_k =0$ 对$k=1,2,\cdots, n$ 成立.
 
-**证明：** 对任意正整数$k$ 我们有$(a_kx+b_k) = a_k+2a_kb_kx +b_k^2$   两边分别取$k=1,2,\cdots, n$ 求和可得
+**证明：** 对任意正整数$k$ 我们有$(a_kx+b_k)^2 = a_k^2x^2+2a_kb_kx +b_k^2$   两边分别取$k=1,2,\cdots, n$ 求和可得
 
 
 $$
 \begin{align}
-\sum \limits_{k=1} (a_kx+b_k) &= \sum \limits_{k=1} (a_k+2a_kb_kx +b_k) \\
-&= x \sum \limits_{k=1} a_k + 2x \sum \limits_{k=1} a_kb_k + \sum \limits_{k=1} b_k
+\sum \limits_{k=1}^n (a_kx+b_k)^2 &= \sum \limits_{k=1}^n (a_k^2x^2+2a_kb_kx +b_k^2) \\
+&= x^2 \sum \limits_{k=1}^n a_k^2 + 2x \sum \limits_{k=1}^n a_kb_k + \sum \limits_{k=1}^n b_k^2
 \end{align}
 $$
 
 
-令 $B = \sum \limits_{k=1} a_kb_k$,  $A=\sum \limits_{k=1} a_k^2$ , $C=\sum \limits_{k=1} b_k^2$ , 我们要证$B \le AC$.  
+令 $B = \sum \limits_{k=1}^n a_kb_k$,  $A=\sum \limits_{k=1}^n a_k^2$ , $C=\sum \limits_{k=1}^n b_k^2$ , 我们要证$B^2 \le AC$.  
 
-因为平方和是一个非负数，我们有$\sum \limits_{k=1} (a_kx+b_k) \ge 0$ 即 $Ax+2Bx+C \ge 0$ 且 $A \ge 0$.
+因为平方和是一个非负数，我们有$\sum \limits_{k=1}^n (a_kx+b_k)^2 \ge 0$ 即 $Ax^2+2Bx+C \ge 0$ 且 $A \ge 0$.
 当$A=0$ 时 有$a_k=0$ 则$B$ 也为$0$, 此时不等式为$0 \le 0$ 显然成立.     
 当$A>0$ 时，不等式左边配方：  
 
 
 $$
 \begin{align}
-Ax+2Bx+C &= A(x+\dfrac{2B}{A}x) + C \\
-&= A(x+\dfrac{B}{A})-\dfrac{B}{A} + C \\
-&= A(x+\dfrac{B}{A}) + \dfrac{AC-B}{A} \ge 0
+Ax^2+2Bx+C &= A(x^2+\dfrac{2B}{A}x) + C \\
+&= A(x+\dfrac{B}{A})^2-\dfrac{B^2}{A} + C \\
+&= A(x+\dfrac{B}{A})^2 + \dfrac{AC-B^2}{A} \ge 0
 
 \end{align}
 $$
 
 
-当$x=-\dfrac{B}{A}$ 时，不等式左边取得最小值，所以$ \dfrac{AC-B}{A} \ge 0$ 必然成立，即 $B \le AC$ 得证.   
+当$x=-\dfrac{B}{A}$ 时，不等式左边取得最小值，所以$ \dfrac{AC-B^2}{A} \ge 0$ 必然成立，即 $B^2 \le AC$ 得证.   
 不难验证，等号成立当且仅当存在实数$x$ 使得 $a_kx+b_k =0$ 对$k=1,2,\cdots, n$ 成立.  $\#$
 
- 
+
 ## 4.10  数学归纳法的杂题
 
 **13. (a)**  令$p$是一个任意正整数，证明
 
 $$
-b - a = (b-a)(b^{p-1}+b^{p-2}a+b^{p-3}a+\cdots+ ba^{p-2}+a^{p-1})
+b^p - a^p = (b-a)(b^{p-1}+b^{p-2}a+b^{p-3}a^2+\cdots+ ba^{p-2}+a^{p-1})
 $$
 
 
@@ -460,7 +460,7 @@ $$
 
 
 $$
-n \lt \dfrac{(n+1)^{p+1}-n^{p+1}}{p+1} \lt (n+1)
+n^p \lt \dfrac{(n+1)^{p+1}-n^{p+1}}{p+1} \lt (n+1)^p
 $$
 
 
@@ -470,7 +470,7 @@ __(__**c**__)__  用数学归纳法证明
 
 
 $$
-\sum_{k=1}^{n-1}k \lt  \dfrac{n^{p+1}}{p+1}  \lt \sum_{k=1} k
+\sum_{k=1}^{n-1}k^p \lt  \dfrac{n^{p+1}}{p+1}  \lt \sum_{k=1}^n k^p
 $$
 
 
@@ -483,13 +483,13 @@ $$
 
 $$
 \begin{align}
-& (b-a)(b^{p-1}+b^{p-2}a+b^{p-3}a+\cdots+ ba^{p-2}+a^{p-1}) \\
-&= (b-a) \left( \sum_{k=0}^{p-1} b^{p-1-k}a \right) \\
-&= b\left( \sum_{k=0}^{p-1} b^{p-1-k}a \right)-a\left( \sum_{k=0}^{p-1} b^{p-1-k}a \right)\\
-&= \sum_{k=0}^{p-1} b^{p-k}a -\sum_{k=0}^{p-1} b^{p-1-k}a^{k+1}\\
-&= \sum_{k=0}^{p-1} b^{p-k}a - \sum_{k=1}^{p} b^{p-k}a \\
-&= b + \sum_{k=1}^{p-1}b^{p-k}a -\left(\sum_{k=1}^{p-1}b^{p-k}a + a \right)\\
-&= b - a
+& (b-a)(b^{p-1}+b^{p-2}a+b^{p-3}a^2+\cdots+ ba^{p-2}+a^{p-1}) \\
+&= (b-a) \left( \sum_{k=0}^{p-1} b^{p-1-k}a^k \right) \\
+&= b\left( \sum_{k=0}^{p-1} b^{p-1-k}a^k \right)-a\left( \sum_{k=0}^{p-1} b^{p-1-k}a^k \right)\\
+&= \sum_{k=0}^{p-1} b^{p-k}a^k -\sum_{k=0}^{p-1} b^{p-1-k}a^{k+1}\\
+&= \sum_{k=0}^{p-1} b^{p-k}a^k - \sum_{k=1}^{p} b^{p-k}a^k \\
+&= b^p + \sum_{k=1}^{p-1}b^{p-k}a^k -\left(\sum_{k=1}^{p-1}b^{p-k}a^k + a^p \right)\\
+&= b^p - a^p
 \end{align}
 $$
 
@@ -500,7 +500,7 @@ $$
 
 
 $$
-(n+1)^{p+1} = \sum_{k=0}^{p+1} \binom{p+1}{k}n
+(n+1)^{p+1} = \sum_{k=0}^{p+1} \binom{p+1}{k}n^k
 $$
 
 
@@ -508,9 +508,9 @@ $$
 
 $$
 \begin{align}
-\dfrac{(n+1)^{p+1}-n^{p+1}}{p+1} &= \dfrac{1}{p+1} \left[\left(\sum_{k=0}^{p+1} \binom{p+1}{k}n\right)-n^{p+1}\right] \\
-&= \dfrac{1}{p+1}\left[ n^{p+1}+(p+1)n + \left(\sum_{k=0}^{p-1} \binom{p+1}{k}n \right)- n^{p+1}\right]\\
-&= n + \dfrac{1}{p+1}\left(\sum_{k=0}^{p-1} \binom{p+1}{k}n \right) 
+\dfrac{(n+1)^{p+1}-n^{p+1}}{p+1} &= \dfrac{1}{p+1} \left[\left(\sum_{k=0}^{p+1} \binom{p+1}{k}n^k\right)-n^{p+1}\right] \\
+&= \dfrac{1}{p+1}\left[ n^{p+1}+(p+1)n^p + \left(\sum_{k=0}^{p-1} \binom{p+1}{k}n^k \right)- n^{p+1}\right]\\
+&= n^p + \dfrac{1}{p+1}\left(\sum_{k=0}^{p-1} \binom{p+1}{k}n^k \right) 
 \end{align}
 $$
 
@@ -519,7 +519,7 @@ $$
 
 
 $$
-\dfrac{(n+1)^{p+1}-n^{p+1}}{p+1} > n
+\dfrac{(n+1)^{p+1}-n^{p+1}}{p+1} > n^p
 $$
 
 
@@ -529,7 +529,7 @@ $$
 
 
 $$
-(n+1)^{p+1}-n^{p+1}=(n+1-n)\cdot((n+1)^{p}+n(n+1)^{p-1}+n(n+1)^{p-2}+\cdots + n^{p-1}(n+1)+n^{p})
+(n+1)^{p+1}-n^{p+1}=(n+1-n)\cdot((n+1)^{p}+n(n+1)^{p-1}+n^2(n+1)^{p-2}+\cdots + n^{p-1}(n+1)+n^{p})
 $$
 
 
@@ -539,11 +539,11 @@ $$
 $$
 \begin{align}
 & \dfrac{(n+1)^{p+1}-n^{p+1}}{p+1} \\
-&= \dfrac{1}{p+1}((n+1)^{p}+n(n+1)^{p-1}+n(n+1)^{p-2}+\cdots + n^{p-1}(n+1)+n^{p}) \\
-&< \dfrac{1}{p+1}((n+1)^{p}+ (n+1)(n+1)^{p}+{(n+1)}(n+1)^{p-2}+\cdots + {(n+1)}^{p-1}(n+1)+{(n+1)}^{p})\\
-&= \dfrac{1}{p+1}((n+1)^{p}+p(n+1)) \\
-&= \dfrac{1}{p+1} (p+1)(n+1) \\
-&= (n+1)
+&= \dfrac{1}{p+1}((n+1)^{p}+n(n+1)^{p-1}+n^2(n+1)^{p-2}+\cdots + n^{p-1}(n+1)+n^{p}) \\
+&< \dfrac{1}{p+1}((n+1)^{p}+ (n+1)(n+1)^{p}+{(n+1)}^2(n+1)^{p-2}+\cdots + {(n+1)}^{p-1}(n+1)+{(n+1)}^{p})\\
+&= \dfrac{1}{p+1}((n+1)^{p}+p(n+1)^p) \\
+&= \dfrac{1}{p+1} (p+1)(n+1)^p \\
+&= (n+1)^p
 \end{align}
 $$
 
@@ -558,11 +558,11 @@ $$
 
 
 $$
-\sum_{k=1}^{n-1} k = \sum_{k=1}^{0}k = 0\ ,\quad \dfrac{n^{p+1}}{p+1}=\dfrac{1}{p+1}\ ,\quad \sum_{k=1}^{1} k =1
+\sum_{k=1}^{n-1} k^p = \sum_{k=1}^{0}k^p = 0\ ,\quad \dfrac{n^{p+1}}{p+1}=\dfrac{1}{p+1}\ ,\quad \sum_{k=1}^{1} k^p =1
 $$
 
 
-求和式$\sum\limits_{k=a} f(k)$ 定义为整数$k$取遍$a\le k \le b$ 时所有项$f(k)$的和. 当$a>b$ 时，则不存在满足条件的$k$，此时定义为空和 (empty sum), 空和的值定义为0. 同理，$\prod\limits_{k=a} f(k)$ 在$a<b$时定义为空积 (empty product)，空积的值定义为1.
+求和式$\sum\limits_{k=a}^b f(k)$ 定义为整数$k$取遍$a\le k \le b$ 时所有项$f(k)$的和. 当$a>b$ 时，则不存在满足条件的$k$，此时定义为空和 (empty sum), 空和的值定义为0. 同理，$\prod\limits_{k=a}^b f(k)$ 在$a<b$时定义为空积 (empty product)，空积的值定义为1.
 
 由于$p$是正整数, 则$0 < \dfrac{1}{p+1} < 1$ 成立，因此不等式在$n=1$这个base case下成立.
 
@@ -571,9 +571,9 @@ $$
 
 $$
 \begin{align}
-\sum_{k=1}^{m-1} k \lt \dfrac{m^{p+1}}{p+1} \hspace{-4em} \\
-\Longrightarrow \sum_{k=1}^{m} k - m \lt \dfrac{m^{p+1}}{p+1} \hspace{-6.5em} \\
-\Longrightarrow \sum_{k=1}^{m} k &\lt \dfrac{m^{p+1}}{p+1} + m \\
+\sum_{k=1}^{m-1} k^p \lt \dfrac{m^{p+1}}{p+1} \hspace{-4em} \\
+\Longrightarrow \sum_{k=1}^{m} k^p - m^p \lt \dfrac{m^{p+1}}{p+1} \hspace{-6.5em} \\
+\Longrightarrow \sum_{k=1}^{m} k^p &\lt \dfrac{m^{p+1}}{p+1} + m^p \\
 &\lt \dfrac{m^{p+1}}{p+1} + \dfrac{(m+1)^{p+1}-m^{p+1}}{p+1} \quad(根据(b)的结论) \\
 &= \dfrac{(m+1)^{p+1}}{p+1}
 
@@ -588,11 +588,11 @@ $$
 
 $$
 \begin{align}
-\dfrac{m^{p+1}}{p+1} < \sum_{k=1}^{m} k \hspace{-8em} \\
-&\Longrightarrow \dfrac{m^{p+1}}{p+1} < \sum_{k=1}^{m+1} k - (m+1) \\
-&\Longrightarrow \dfrac{m^{p+1}}{p+1} + (m+1) < \sum_{k=1}^{m+1} k \\
-&\Longrightarrow  \dfrac{m^{p+1}}{p+1} + \dfrac{(m+1)^{p+1}-m^{p+1}}{p+1}  < \dfrac{m^{p+1}}{p+1} + (m+1) < \sum_{k=1}^{m+1} k \\
-&\Longrightarrow \dfrac{(m+1)^{p+1}}{p+1} <  \sum_{k=1}^{m+1} k
+\dfrac{m^{p+1}}{p+1} < \sum_{k=1}^{m} k^p \hspace{-8em} \\
+&\Longrightarrow \dfrac{m^{p+1}}{p+1} < \sum_{k=1}^{m+1} k^p - (m+1)^p \\
+&\Longrightarrow \dfrac{m^{p+1}}{p+1} + (m+1)^p < \sum_{k=1}^{m+1} k^p \\
+&\Longrightarrow  \dfrac{m^{p+1}}{p+1} + \dfrac{(m+1)^{p+1}-m^{p+1}}{p+1}  < \dfrac{m^{p+1}}{p+1} + (m+1)^p < \sum_{k=1}^{m+1} k^p \\
+&\Longrightarrow \dfrac{(m+1)^{p+1}}{p+1} <  \sum_{k=1}^{m+1} k^p
 
 \end{align}
 $$
