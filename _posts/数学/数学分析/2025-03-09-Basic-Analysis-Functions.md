@@ -1,5 +1,5 @@
 ---
-title: Basic-Analysis-Functions
+title: 分析基础：函数
 date: 2025-03-09 17:27:41 +0800
 categories:
   - 数学
